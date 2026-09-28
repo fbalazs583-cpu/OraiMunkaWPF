@@ -5,8 +5,82 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OraiMunkaWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="820" Width="450">
+    <Grid Margin="30">
+        <StackPanel>
+            <TextBlock Text="Mozijegy Foglalás"
+                       FontSize="40" 
+                       FontWeight="Bold" 
+                       Foreground="Black" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,5,6" />
 
+            <TextBlock Text="Név:"
+                       FontSize="20"
+                       Margin="0,10,0,0"
+                       Foreground="Black" />
+            <TextBox x:Name="nev"
+                     FontSize="20"
+                     Padding="2" />
+
+            <TextBlock Text="Életkor:"
+                       FontSize="20"
+                       Margin="0,10,0,0"
+                       Foreground="Black" />
+            <TextBox x:Name="eletkor"
+                     FontSize="15"
+                     Margin="0,5,345,0"
+                     Padding="2" />
+
+            <TextBlock Text="Film:"
+                       FontSize="20"
+                       Margin="0,10,0,0"
+                       Foreground="Black" />
+            <ComboBox FontSize="20" x:Name="filmChoose">
+                <ComboBoxItem>Villám mekvin</ComboBoxItem>
+                <ComboBoxItem>Spongyabob</ComboBoxItem>
+                <ComboBoxItem>Terrifier 3</ComboBoxItem>
+            </ComboBox>
+
+            <TextBlock Text="Jegy típusa:"
+                       FontSize="20"
+                       Margin="0,10,0,5"
+                       Foreground="Black" />
+            <RadioButton Content="Diák - 2100Ft"
+                         x:Name="diak"
+                         GroupName="tipus" 
+                         FontSize="15" 
+                         VerticalContentAlignment="Center"/>
+            <RadioButton Content="Normál - 3000Ft" 
+                         x:Name="normal"
+                         GroupName="tipus" 
+                         FontSize="15"
+                         VerticalContentAlignment="Center"/>
+            <RadioButton Content="Nyugdíjas - 1500Ft" 
+                         x:Name="nyugdijas"
+                         GroupName="tipus" 
+                         FontSize="15" 
+                         VerticalContentAlignment="Center"/>
+
+            <TextBlock Text="Jegyek száma:"
+                       FontSize="20"
+                       Margin="0,10,0,0"
+                       Foreground="Black" />
+            <TextBox x:Name="jegyek"
+                     FontSize="15"
+                     Margin="0,5,345,0"
+                     Padding="2" />
+            <TextBlock Text="Egyéb szolgáltatások:"
+                       FontSize="20"
+                       Margin="0,10,0,5"
+                       Foreground="Black" />
+            <CheckBox Content="Happy Finish - 30.000Ft" VerticalContentAlignment="Center" FontSize="15" x:Name="happyfinish"></CheckBox>
+            <CheckBox Content="Popcorn - 1500Ft" VerticalContentAlignment="Center" FontSize="15" x:Name="popcorn"></CheckBox>
+            <CheckBox Content="Nachos - 2000Ft" VerticalContentAlignment="Center" FontSize="15" x:Name="nachos"></CheckBox>
+            
+            
+            <CheckBox Content="Elfogadom a felhasználási feltételeket." VerticalContentAlignment="Center" FontSize="15" x:Name="feltetel" Margin="0,60,0,0"></CheckBox>
+            <Button Content="LEFOGLALOM" Background="BlueViolet" Foreground="White" FontWeight="Bold" Padding="20" Margin="20,20,20,0" FontSize="30" Click="Button_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>
